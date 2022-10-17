@@ -1,62 +1,27 @@
 #include <stdio.h>
-
 /**
- * main - prints all possible different combinations of two digits
- * Return: Always 0 (Success)
+ * main - program compilation begins from main
+ * Description: Program to print all possible combinations of numbers
+ with no two numbers same in pairing
+ * author: sammykingx
+ * Return: 0 means success
  */
-
-
-
 int main(void)
-
 {
+        int a, b;
 
-	int n, m;
-
-
-
-	for (n = 48; n <= 56; n++)
-
-	{
-
-		for (m = 49; m <= 57; m++)
-
-		{
-
-			if (m > n)
-
-			{
-
-				putchar(n);
-
-
-
-				putchar(m);
-
-
-
-				if (n != 56 || m != 57)
-
-				{
-
-					putchar(',');
-
-
-
-					putchar(' ');
-
-				}
-
-			}
-
-		}
-
-	}
-
-	putchar('\n');
-
-
-
-	return (0);
-
+        for (a = 48; a <=57; a++)
+        {
+                for (b = 49; b <= 57; b++)
+                {
+                        if ( a != b && b > a)
+                        {
+                                putchar(a);
+                                putchar(b);
+                                putchar(',');
+                        }
+                }
+        }
+        putchar('\n');
+        return (0);
 }

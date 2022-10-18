@@ -1,8 +1,8 @@
-#include "main_h"
+#include "main.h"
 
 /**
- * main - print _putchar
- * is written by cynthia
+ * main - prints putchar
+ * description: prints _putchar
  * Return: 0
  */
 int main(void)

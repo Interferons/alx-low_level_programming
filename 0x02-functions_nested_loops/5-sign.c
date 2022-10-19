@@ -1,33 +1,29 @@
 #include "main.h"
 
 /**
- * _isalpha - Return 1 if c is a letter. lowercase or uppercase
- * @c: The int to print
- * Return: Always 0.
+ * print_sign - Print the sign of a number
+ * @n: type int integer, can be negative or positive
+ * Description: print +, 0, or - depending on number, along with return
+ * Return: 1 if +, 0 if 0, and -1 if -
  */
 
-int _isalpha(int c)
-
-
+int print_sign(int n)
 
 {
 
-	if ((c > 'a' && c < 'z') || (c > 'A' && c < 'Z'))
-
+	if (n > 0)
 	{
-
+		_putchar('+');
 		return (1);
-
 	}
-
-	else
-
+	else if (n < 0)
 	{
-
-		return (0);
-
+		_putchar('-');
+		return (-1);
 	}
-
-
-
+	else
+	{
+		_putchar('0');
+		return (0);
+	}
 }

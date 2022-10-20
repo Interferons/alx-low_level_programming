@@ -1,4 +1,4 @@
-#include "main.h"
+#include "1-main.c"
 
 /**
  * main - causes an infinite loop

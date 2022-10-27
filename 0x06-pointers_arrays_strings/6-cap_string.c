@@ -1,30 +1,27 @@
+
 #include "main.h"
 /**
- * cap_string - capitalizes all words of a string
- * @s: input string.
+ * _strcat - concatenates two strings,
+ * @dest: destination.
+ * @src: source.
  * Return: the pointer to dest.
  */
-
-char *cap_string(char *s)
+char *_strcat(char *dest, char *src)
 {
-	int count = 0, i;
-	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	int count = 0, count2 = 0;
 
-	if (*(s + count) >= 97 && *(s + count) <= 122)
-		*(s + count) = *(s + count) - 32;
-	count++;
-	while (*(s + count) != '\0')
+	while (*(dest + count) != '\0')
 	{
-		for (i = 0; i < 13; i++)
-		{
-			if (*(s + count) == sep_words[i])
-			{
-				if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
-					*(s + (count + 1)) = *(s + (count + 1)) - 32;
-				break;
-			}
-		}
 		count++;
 	}
-	return (s);
-}}
+
+	while (count2 >= 0)
+	{
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+			break;
+		count++;
+		count2++;
+	}
+	return (dest);
+}

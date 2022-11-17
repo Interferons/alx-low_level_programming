@@ -1,5 +1,5 @@
-What are function pointers and how to use them
+What are variadic functions
 
-What does a function pointer exactly hold
+How to use va_start, va_arg and va_end macros
 
-Where does a function pointer point to in the virtual memory
+Why and how to use the const type qualifier
